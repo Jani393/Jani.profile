@@ -12,15 +12,7 @@
   
 /* estilos generales */
 
-  .fuente-clara {
-    color: #eeeeee;
-  }
-  .fuente-oscura {
-    color: #420b6e;
-  }
-  .fuente-acento {
-    color: #ed09f5;
-  }
+ 
   .section-carrusel img {
     width: 100%;
   } 
@@ -53,6 +45,9 @@ header{
     font-family: Arial, Helvetica, sans-serif;
     width: 100%;
 }
+.logo {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
 header h1.logo {
   display:inline-block;
   font-size:  40px;
@@ -60,6 +55,22 @@ header h1.logo {
   font-weight: bold;
   padding: 0 50px;
 }
+
+#check {
+  display:none;
+}
+
+.checkbtn{
+  font-size: 25px;
+  color: blue;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+
 header nav {
   float: right;
 }
@@ -174,4 +185,50 @@ footer {
     border: 20px;
     border-radius: 5px;
   }
+  .checkbtn {
+    display: block;
+  }
+
+  header > nav:nth-child(2) > ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: yellow;
+    text-align: center;
+  
+    top: 100px;
+    left: 100%;
+    transition: all 0.5s;
+  }
+
+  #check:checked ~ ul {
+    left: 0;
+    display: block;
+  }
+
+  header > nav:nth-child(2) > ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+
+  header > nav:nth-child(2) > ul li a {
+    font-size: 20px;
+  }
+
+  #check:checked ~ .checkbtn {
+    color:orangered;
+  }
+
+  /* ACTIVE */
+  .navbar-active {
+    height. 100vh;
+  }
+  .navbar.active ul.menu {
+    opacity: 1;
+  }
+
+
+
+
 }
